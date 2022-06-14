@@ -4,8 +4,8 @@ from pymy_audio import AudioConvert
 def interface():
     print ('this is a comandline interface to convert audio files')
     print('supported extentions so far: MP3, WAV \n')
-    src = input('enter the audio filename?\n')
-    src_path  = input('where is your file?\n')
+    src = input('enter the complete audio filename?\n')
+    src_path  = input('where is your file? eg: Music or Downloads etc..\n')
     dts = input('what will you call the new file?\n')
     from_format = input("whats format is the file?\n")
     to_format = input("to what format?\n")

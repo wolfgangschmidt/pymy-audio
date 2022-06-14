@@ -21,8 +21,10 @@ class AudioConvert:
             name = '/24-' + self.dst.split('/')[-1]
             command = f'sox {self.dst} -b {self.rate} {self.path + name}'
             subprocess.call(command, shell=True)
+            print(f"success!!! your file is here: {self.dst}")
             return f"success!!! your file is here: {self.dst}"
         except:
+            print("someting wnet wrong check you file extention or path")
             return "someting wnet wrong check you file extention or path"
 
     def wav_to_mp3(self):
@@ -30,6 +32,8 @@ class AudioConvert:
             self.dst += ".mp3"
             sound = AudioSegment.from_wav(self.src)
             sound.export(self.dst, format="mp3")
+            print(f"success!!! your file is here: {self.dst}")
             return f"success!!! your file is here: {self.dst}"
         except:
+            print("someting wnet wrong check you file extention or path")
             return "someting wnet wrong check you file extention or path"

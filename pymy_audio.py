@@ -7,8 +7,10 @@ import subprocess
 class AudioConvert:
     def __init__(self, src, src_path=None, dst="new", rate=16):
         self.path = str(Path.home() / "Music")
-        if src_path:
-            src = str(Path.home() / src_path) + f'/{src}'
+         #REMOVING THIS BIT IN ORDER TO USE DIALOGBOX
+        # if src_path:
+        #     src = str(Path.home() / src_path) + f'/{src}
+        #-------------------------------------------
         self.src = src
         self.dst = self.path + f'/{dst}'
         self.rate = rate

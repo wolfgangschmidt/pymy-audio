@@ -10,7 +10,7 @@ eg: sudo apt-get install **sox** && apt-get install **ffmpeg** && apt-get instal
 - install python libs:
     - run:
 
-        ```pip3 install -r requeirements.txtx```
+        ```pip3 install -r requeirements.txt```
 
 
 

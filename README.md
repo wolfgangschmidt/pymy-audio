@@ -4,7 +4,7 @@
 ## pre-req
 
 - verify if you have the **sox** extension on you system as well as **ffmpeg** if not install them.
-eg: sudo apt-get install **sox** && apt-get install **ffmpeg** && apt-get install python3-pip -y
+eg: sudo apt-get install **sox** && apt-get install **ffmpeg** && apt-get install python3-tk && apt-get install python3-pip -y
 
 
 - install python libs:

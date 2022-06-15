@@ -5,12 +5,13 @@ from pydub import AudioSegment
 import subprocess
 
 class AudioConvert:
-    def __init__(self, src, src_path=None, dst="new", rate=16):
+    def __init__(self, src, khz='44100', src_path=None, dst="new", rate=16):
         self.path = str(Path.home() / "Music")
          #REMOVING THIS BIT IN ORDER TO USE DIALOGBOX
         # if src_path:
         #     src = str(Path.home() / src_path) + f'/{src}
         #-------------------------------------------
+        self.khz = khz
         self.src = src
         self.dst = self.path + f'/{dst}'
         self.rate = rate
@@ -21,7 +22,7 @@ class AudioConvert:
             sound = AudioSegment.from_mp3(self.src)
             sound.export(self.dst,format="wav")
             name = '/24-' + self.dst.split('/')[-1]
-            command = f'sox {self.dst} -b {self.rate} {self.path + name}'
+            command = f'sox {self.dst} −r {self.khz} -b {self.rate} {self.path + name}'
             subprocess.call(command, shell=True)
             print(f"success!!! your file is here: {self.dst}")
             return f"success!!! your file is here: {self.dst}"

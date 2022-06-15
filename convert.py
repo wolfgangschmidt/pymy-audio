@@ -17,6 +17,7 @@ def interface():
     dts = input('what will you call the new file?\n')
     from_format = input("whats format is the file?\n")
     to_format = input("to what format?\n")
+    to_rate_khz = input('to what khz rate? \n')
     if 'mp3' == from_format.lower() and 'wav' == to_format.lower():
         rate = input('what bit rate for the file?\n')
         AudioConvert(src=src, src_path=src, dst=dts, rate=rate).mp3_to_wav()
